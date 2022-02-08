@@ -1,0 +1,59 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  creationTimestamp: null
+  name: manager-role
+rules:
+- apiGroups:
+  - home.teaglebuilt.tech
+  resources:
+  - devices
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - home.teaglebuilt.tech
+  resources:
+  - devices/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - home.teaglebuilt.tech
+  resources:
+  - devices/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - home.teaglebuilt.tech
+  resources:
+  - zigbees
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - home.teaglebuilt.tech
+  resources:
+  - zigbees/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - home.teaglebuilt.tech
+  resources:
+  - zigbees/status
+  verbs:
+  - get
+  - patch
+  - update

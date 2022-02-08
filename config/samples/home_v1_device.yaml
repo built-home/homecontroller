@@ -1,0 +1,9 @@
+apiVersion: home.teaglebuilt.tech/v1
+kind: Device
+metadata:
+  name: device-sample
+spec:
+  name: VertikalDesktop
+  type: Macbook
+  os: darwin
+  ipAddress: ${IPADDRESS}

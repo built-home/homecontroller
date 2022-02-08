@@ -1,0 +1,9 @@
+apiVersion: home.teaglebuilt.tech/v1
+kind: Device
+metadata:
+  name: mb-8-laptop
+spec:
+  name: PersonalDesktop
+  type: Macbook
+  os: darwin
+  ipAddress: ${IPADDRESS}
